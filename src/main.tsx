@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider } from "react-router";
+import { RouterProvider } from "react-router-dom";
 import { router } from "./routes.tsx";
 import "@mantine/core/styles.css";
 import { MantineProvider, createTheme, virtualColor } from "@mantine/core";
@@ -8,12 +8,13 @@ import { MantineProvider, createTheme, virtualColor } from "@mantine/core";
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
   colors: {
-    chanadda: virtualColor({
-      name: "chanadda",
-      dark: "pink",
-      light: "cyan",
+    boss: virtualColor({
+      name: "boss",
+      dark: "yellow",
+      light: "green",
     }),
   },
+
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

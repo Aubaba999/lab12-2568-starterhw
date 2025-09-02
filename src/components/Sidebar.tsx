@@ -8,11 +8,11 @@ import {
   Text,
   Group,
 } from "@mantine/core";
-interface SidebarComponentProps  {
-  userName: string;
-  type?: "admin" |"student";
-}
-export type { SidebarProps };
+// interface SidebarComponentProps  {
+//   userName: string;
+//   type?: "admin" |"student";
+// }
+// export type { SidebarComponentProps };
 export default function Sidebar() {
   return (
     <Stack
@@ -24,14 +24,14 @@ export default function Sidebar() {
       {/* Menu / เมนู*/}
       <Box>
         <NavLink
-          color="cyan"
+          color="boss"
           label="Home"
           component={RouterNavLink}
           to="/"
           active
         />
         <NavLink
-          color="cyan"
+          color="boss"
           label="About"
           component={RouterNavLink}
           to="/about"
@@ -43,7 +43,12 @@ export default function Sidebar() {
       </Box>
       {/* แสดงผู้ใช้งาน */}
       <Box p={10}>
-        <Text>chanadda</Text>
+        <Group>
+          <Indicator inline size={10} offset={5} position="bottom-end" color="green" withBorder>
+            <Avatar src="/1.gif"></Avatar>
+          </Indicator>
+         <Text>User: boss </Text>
+        </Group>
       </Box>
     </Stack>
   );
